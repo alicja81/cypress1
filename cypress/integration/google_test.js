@@ -20,11 +20,29 @@ it('can find div with custom data atribute',() => {
 it(
     'Can Find Elements By Their Content', () => {
     cy.get('.query-list')
-    .contains('bananas').should('have.class', 'third')
+    .contains('bananas')
+    .should('have.class', 'third')
 })
 
 it(
     'can find elements by their content', () => {
     cy.get('.query-list')
-    .contains('apples').should('have.class', 'first')
+    .contains('apples')
+    .should('have.class', 'first')
 })
+
+it(
+    'Can Find Element By their content', () => {
+    cy.get('#querying')
+    .contains('ul', 'oranges')
+    .should('have.class', 'query-list')
+})
+
+it(
+   'can find element by their content', () => {
+    cy.get('.query-button')
+    .contains('Save Form')
+    .should('have.class', 'btn')
+   
+})
+
